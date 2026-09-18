@@ -31,78 +31,79 @@
 
 - **题目代码：**
 
-\#include<bits/stdc++.h>
+`\#include<bits/stdc++.h>`
 
-using namespace std;
+`using namespace std;`
 
-using ll=long long;
+`using ll=long long;`
 
-using ull=unsigned long long;
+`using ull=unsigned long long;`
 
-using ill=__int128;
+`using ill=__int128;`
 
-const ll mod1=1e9+7;
+`const ll mod1=1e9+7;`
 
-const ll mod2=998244353;
+`const ll mod2=998244353;`
 
-int main(){
+`int main(){`
 
-  ios::sync_with_stdio(false);
+  `ios::sync_with_stdio(false);`
 
-  cin.tie(0);cout.tie(0);
+  `cin.tie(0);cout.tie(0);`
 
-  ll n,m,k;cin>>n>>m>>k;
+  `ll n,m,k;cin>>n>>m>>k;`
 
-  vector<vector<ll>>a(n+2,vector<ll>(m+2,0));
+  `vector<vector<ll>>a(n+2,vector<ll>(m+2,0));`
 
-  for(ll i=1;i<=n;i++){
+  `for(ll i=1;i<=n;i++){`
 
-​    string s;cin>>s;
+​    `string s;cin>>s;`
 
-​    for(ll j=1;j<=m;j++){
+​    `for(ll j=1;j<=m;j++){`
 
-​      a[i][j]=s[j-1]-'0';
+​      `a[i][j]=s[j-1]-'0';`
 
-​    }
+​    `}`
 
-  }
+  `}`
 
-  for(ll i=1;i<=n;i++){
+  `for(ll i=1;i<=n;i++){`
 
-​    for(ll j=1;j<=m;j++){
+​    `for(ll j=1;j<=m;j++){`
 
-​      a[i][j]=a[i-1][j]+a[i][j-1]-a[i-1][j-1]+a[i][j];
+​      `a[i][j]=a[i-1][j]+a[i][j-1]-a[i-1][j-1]+a[i][j];`
 
-​    }
+​    `}`
 
-  }
+  `}`
 
-  
+``  
 
-  ll ans=0;
+  `ll ans=0;`
 
-  for(ll i=1;i<=n;i++){
+  `for(ll i=1;i<=n;i++){`
 
-​    for(ll j=1;j<=m;j++){
+​    `for(ll j=1;j<=m;j++){`
 
-​      if((j+k-1)>m)break;
+​      `if((j+k-1)>m)break;`
 
-​      ll x=i+k-1,y=j+k-1;
+​      `ll x=i+k-1,y=j+k-1;`
 
-​      if((a[x][y]-a[i-1][y]-a[x][j-1]+a[i-1][j-1])>0){
+​      `if((a[x][y]-a[i-1][y]-a[x][j-1]+a[i-1][j-1])>0){`
 
-​        ans++;
+​        `ans++;`
 
-​      }
+​      `}`
 
-​    }
+​    `}`
 
-​    if((i+k-1)>n)break;
+​    `if((i+k-1)>n)break;`
 
-  }
+  `}`
 
-  cout<<ans;
+  `cout<<ans;`
 
-  return 0;
+  `return 0;`
 
-}
+`}`
+
