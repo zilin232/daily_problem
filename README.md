@@ -1,4 +1,4 @@
 # daily_problem
-Solve one algorithm problem every day, record my code and thinking notes.
+Solve one(Could be more) algorithm problem every day, record my code and thinking notes.
 
-目前题目来源只有牛客。
+目前题目来源牛客 和 codefroces。
