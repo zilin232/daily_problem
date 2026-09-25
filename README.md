@@ -15,4 +15,4 @@ And competition
 
 
 
-目前题目来源牛客 和 codefroces。
+题目来源牛客 和 codefroces。
