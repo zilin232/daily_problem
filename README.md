@@ -13,6 +13,4 @@ And competition
 
 [牛客竞赛_ACM/NOI/CSP/CCPC/ICPC算法编程高难度练习赛_牛客竞赛OJ](https://ac.nowcoder.com/acm/contest/140489)
 
-
-
 题目来源牛客 和 codefroces。
