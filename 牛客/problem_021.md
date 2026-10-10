@@ -44,8 +44,8 @@
  using ill=__int128;
  const ll mod1=1e9+7;
  const ll mod2=998244353;
- bool is[110][110];
- pair<ll,ll>pr[110][110];
+ bool is[110][110];//表示是否会出现a中元素之和为i且b中元素之和为j的情况
+ pair<ll,ll>pr[110][110];//表示有哪个{a,b}转移过来
  int main(){
      ios::sync_with_stdio(false);
      cin.tie(0);cout.tie(0);
@@ -56,6 +56,7 @@
      for(ll i=1;i<=n;i++){
          for(ll j=100;j>=0;j--){
              for(ll p=100;p>=0;p--){
+         //两处如果非倒序遍历会导致重复使用
                  if(is[j][p]){
                      if((j+k[i])<=100&&!is[j+k[i]][p]){
                          is[j+k[i]][p]=true;
@@ -79,7 +80,7 @@
          }
          if((i*i)>x){
              cout<<"No"<<'\n';continue;
-         }
+         }//检测x是否可以分解成两个因数使得is[i][x/i]可以到达
          ll j=x/i;
          vector<ll>a;
          vector<ll>b;
@@ -91,7 +92,7 @@
                  a.push_back(i-pr[i][j].first);
                  i=pr[i][j].first;
              }
-         }
+         }//回溯求a、b数组
          cout<<"Yes"<<'\n';
          cout<<a.size()<<' '<<b.size()<<'\n';
          for(auto z:a)cout<<z<<' ';
